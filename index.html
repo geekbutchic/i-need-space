@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,17 @@
     <title>Satellite Viewer</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <div class="content">
 
-        <h1>
-            When can I see a certain satellite?
-        </h1>
-        
+        <h1>When Can I See A Certain Satellite?</h1>
+
         <div class="section">
             <div class="row">
                 <h2>
@@ -25,16 +26,16 @@
                 </h2>
             </div>
             <div class="row">
-                <label>Mapbox API Key</label>
-                <input id="api-key" />
+                <label><b>Mapbox API Key</b></label>
+                <input id="api-key" placeholder="Insert your API key" />
             </div>
             <div class="row">
-                <label>Address</label>
-                <input id="address" />
+                <label><b>Address:</b></label>
+                <input id="address" placeholder="City, State" />
             </div>
             <div class="row">
-                <label>Satellite NORAD</label>
-                <input id="norad" />
+                <label><b>Satellite "NORAD"</b></label>
+                <input id="norad" placeholder="Enter Satellite ID" />
             </div>
             <div class="row">
                 <button id="search">
@@ -46,9 +47,10 @@
         <div class="section">
             <div class="row">
                 <h2>
-                    Notable Satellites
+                    Notable 📡 Satellites 
                 </h2>
             </div>
+
             <div class="row">
                 <div class="title">
                     <b>Name</b>
@@ -57,17 +59,19 @@
                     <b>NORAD (Satellite ID)</b>
                 </div>
             </div>
+
             <div class="row">
                 <div class="item">
-                    Int. Space Station
+                    <b>Int. Space Station</b>
                 </div>
                 <div class="item">
                     25544
                 </div>
             </div>
+
             <div class="row">
                 <div class="item">
-                    Hubble Space Telescope
+                    <b>Hubble Space Telescope</b>
                 </div>
                 <div class="item">
                     20580
@@ -75,20 +79,22 @@
             </div>
             <div class="row">
                 <div class="item">
-                    SpaceX Dragon
+                    <b>Space X Dragon</b>
                 </div>
                 <div class="item">
                     46920
                 </div>
             </div>
             <div class="row">
-                <b>Find more of the brightest satellites' NORAD IDs&nbsp;<a href="https://www.n2yo.com/satellites/?c=1">here</a>.</b>
+                <b>Find more of the brightest satellites' NORAD IDs&nbsp;<a
+                        href="https://www.n2yo.com/satellites/?c=1">Click Here</a>.</b>
             </div>
         </div>
+        <div id="input">
 
+        </div>
     </div>
-
-    <script src="apiKey.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

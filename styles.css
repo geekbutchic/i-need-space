@@ -4,13 +4,15 @@
 }
 
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: #caf0f8;
+    text-align: center;
 }
 
 h1, h2 {
-    font-family: 'Orelega One', cursive;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif
 }
 
 h2 {
@@ -57,7 +59,7 @@ input {
     justify-self: flex-end;
     font-size: 14px;
     height: 24px;
-    background-color: #caf0f8;
+    background-color: #edf3f3;
     outline: none;
     border: none;
     padding: 3px 6px;
@@ -69,13 +71,13 @@ button {
     color: white;
     outline: none;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 12px;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: box-shadow 0.2s ease;
 }
 
-button:hover {
-    box-shadow: 0 0 20px #caf0f8;
+.section {
+    padding: 12px;
+    background-color: #ade3ed;
 }
