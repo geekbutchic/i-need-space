@@ -4,7 +4,8 @@ button.addEventListener("click", function () {
   const address = document.querySelector("#address");
   const apiKey = document.querySelector("#api-key");
   const norad = document.querySelector("#norad");
-// First API Request
+
+// FIRST API REQUEST
   let URL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address.value}.json?access_token=${apiKey.value}`;
   const encodedURL = encodeURI(URL);
   fetch(encodedURL)
@@ -38,9 +39,9 @@ button.addEventListener("click", function () {
                     <br>
                     </div>
                 </div>`;
-            // display.innerHTML += html;
+            display.innerHTML += html;
             // Multiple Display
-            display.innerHTML = html;
+            // display.innerHTML = html;
             // Single Display
           };
           body();
@@ -48,3 +49,4 @@ button.addEventListener("click", function () {
     });
 });
 
+// pk.eyJ1IjoidnNvbm55bGVlIiwiYSI6ImNsMXdiemhkMDB6ejEzY3FmOWV5M2hvNDYifQ.zHfPulAWhhaqHoLXiCsR_g
