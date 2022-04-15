@@ -5,7 +5,7 @@ button.addEventListener("click", function () {
   const apiKey = document.querySelector("#api-key");
   const norad = document.querySelector("#norad");
 
-// FIRST API REQUEST
+  // FIRST API REQUEST
   let URL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address.value}.json?access_token=${apiKey.value}`;
   const encodedURL = encodeURI(URL);
   fetch(encodedURL)
@@ -17,15 +17,15 @@ button.addEventListener("click", function () {
 
       const spaceURL = `https://satellites.fly.dev/passes/${norad.value}?lat=${latitude}&lon=${longitude}3&limit=1&days=15&visible_only=true`;
       const encodedURL = encodeURI(spaceURL);
-// Second API Request
+      // Second API Request
       fetch(encodedURL)
         .then((rawResponse) => rawResponse.json())
         .then((dataFromAPI) => {
           console.log(dataFromAPI);
           const culmination = dataFromAPI[0].culmination.utc_datetime;
-          const rise = dataFromAPI[0].rise.utc_datetime;
+          const rise = new Date(dataFromAPI[0].rise.utc_datetime);
           const set = dataFromAPI[0].set.utc_datetime;
-// Set Up Display
+          // Set Up Display
           const display = document.querySelector("#input");
           const body = () => {
             let html = `
@@ -45,7 +45,7 @@ button.addEventListener("click", function () {
             // display.innerHTML = html;
             // Single Display
           };
-          body();
+          body(); 
         });
     });
 });
