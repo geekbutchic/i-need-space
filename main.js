@@ -21,6 +21,7 @@ button.addEventListener("click", function () {
       fetch(encodedURL)
         .then((rawResponse) => rawResponse.json())
         .then((dataFromAPI) => {
+          console.log(dataFromAPI);
           const culmination = dataFromAPI[0].culmination.utc_datetime;
           const rise = dataFromAPI[0].rise.utc_datetime;
           const set = dataFromAPI[0].set.utc_datetime;
@@ -48,5 +49,3 @@ button.addEventListener("click", function () {
         });
     });
 });
-
-// pk.eyJ1IjoidnNvbm55bGVlIiwiYSI6ImNsMXdiemhkMDB6ejEzY3FmOWV5M2hvNDYifQ.zHfPulAWhhaqHoLXiCsR_g
